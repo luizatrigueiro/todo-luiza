@@ -1,7 +1,7 @@
-<%= form_with model: list, local: true do |form| %>
+<%= form_with(model: list, local: true, class: "container") do |form| %>
     <% if list.errors.any? %>
       <div class="alert alert-danger">
-        <h2><%= pluralize(list.errors.count, "error") %> prevented the list from being saved:</h2>
+        <h4><%= pluralize(list.errors.count, "error") %> found</h4>
         <ul>
           <% list.errors.full_messages.each do |message| %>
             <li><%= message %></li>
@@ -10,13 +10,11 @@
       </div>
     <% end %>
   
-    <div class="field">
-      <%= form.label :title, "Title" %><br>
-      <%= form.text_field :title %>
+    <div class="mb-3">
+      <%= form.label :title, class: "form-label" %>
+      <%= form.text_field :title, class: "form-control" %>
     </div>
   
-    <div class="actions">
-      <%= form.submit %>
-    </div>
+    <%= form.submit class: "btn btn-primary" %>
   <% end %>
   
