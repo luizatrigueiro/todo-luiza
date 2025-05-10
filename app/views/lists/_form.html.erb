@@ -1,0 +1,22 @@
+<%= form_with model: list, local: true do |form| %>
+    <% if list.errors.any? %>
+      <div class="alert alert-danger">
+        <h2><%= pluralize(list.errors.count, "error") %> prevented the list from being saved:</h2>
+        <ul>
+          <% list.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= form.label :title, "Title" %><br>
+      <%= form.text_field :title %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  

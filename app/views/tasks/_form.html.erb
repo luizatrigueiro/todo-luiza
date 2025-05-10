@@ -1,0 +1,27 @@
+<%= form_with(model: [@list, task], local: true) do |form| %>
+    <% if task.errors.any? %>
+      <div class="alert alert-danger">
+        <h2><%= pluralize(task.errors.count, "error") %> prevented the task from being saved:</h2>
+        <ul>
+          <% task.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= form.label :description %><br>
+      <%= form.text_field :description %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :done %>
+      <%= form.check_box :done %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  

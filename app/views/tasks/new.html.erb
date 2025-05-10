@@ -1,0 +1,5 @@
+<h2>New Task for "<%= @list.title %>"</h2>
+
+<%= render 'form', task: @task %>
+
+<%= link_to 'Back', list_path(@list) %>
