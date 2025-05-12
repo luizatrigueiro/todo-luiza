@@ -5,7 +5,7 @@ class ListsController < ApplicationController
       @lists = List.all
 
       respond_to do |format|
-        format.html 
+        format.html
         format.any { head :not_acceptable }
       end
     end
