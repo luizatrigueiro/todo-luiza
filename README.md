@@ -61,6 +61,10 @@ Uma aplicação web desenvolvida usando Ruby on Rails, com foco em organização
 
 ---
 
+### Obs: Ao acessar o link da aplicação no Render, o navegador pode exibir um aviso de segurança. Isso ocorre porque o domínio de deploy está sob HTTPS e pode utilizar um certificado padrão da plataforma. A aplicação está segura e não coleta nenhum dado sensível do usuário. Para prosseguir, basta clicar em "Avançado" e seguir para o site.
+
+---
+
 ## Desenvolvido por Luiza Trigueiro
 - GitHub — @luizatrigueiro
 
