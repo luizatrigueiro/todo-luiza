@@ -3,6 +3,11 @@ class ListsController < ApplicationController
 
     def index
       @lists = List.all
+
+      respond_to do |format|
+        format.html
+        format.any { head :not_acceptable }
+      end
     end
 
     def show
